@@ -3,6 +3,33 @@ ElasticSearch NativeScript Template build on Maven, support the newly version El
 
 inspired by imotov/elasticsearch-native-script-example
 
+# structure
+```
+.
+├── pom.xml *
+├── src
+│   ├── main
+│   │   ├── assemblies
+│   │   │   └── plugin.xml *
+│   │   ├── java
+│   │   │   └── org
+│   │   │       └── elasticsearch
+│   │   │           └── custom
+│   │   │               └── nativescript
+│   │   │                   ├── plugin
+│   │   │                   │   └── NativeScriptPlugin.java *
+│   │   │                   └── scripts
+│   │   │                       └── ScoreScript.java *
+│   │   └── resources
+│   │       └── plugin-descriptor.properties *
+│   └── test
+│       └── java
+└── target
+    ├── elasticsearch-native-script-template-1.0-SNAPSHOT.jar
+    └── releases
+        └── elasticsearch-native-script-template-1.0-SNAPSHOT.zip *
+```
+
 ## write your own native script, you just need to edit this two class files:
 org.elasticsearch.custom.nativescript.scripts.ScoreScript
 org.elasticsearch.custom.nativescript.plugin.NativeScriptPlugin#getNativeScripts()
